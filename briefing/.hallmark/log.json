@@ -1,0 +1,41 @@
+[
+ {
+  "shape": "interactive product atlas",
+  "theme": "custom",
+  "axes": "light/roman-serif/cool",
+  "hero": "statement and persistent Task spine",
+  "nav": "chapter rail",
+  "footer": "acceptance and source ledger",
+  "imagery": "semantic diagrams",
+  "photos": [],
+  "entry": "chapter index",
+  "fingerprint": [
+   "chapter rail",
+   "persistent Task spine",
+   "guided relationship diagram",
+   "simulation ledger",
+   "phase rollback",
+   "acceptance questions"
+  ],
+  "sections": [
+   "overview",
+   "panorama",
+   "spaces",
+   "story",
+   "executors",
+   "harness",
+   "architecture",
+   "roadmap",
+   "alignment"
+  ],
+  "signature": "The Task stays while Runs change",
+  "waived": [],
+  "prompt": "Cimi Work 产品介绍及蓝图，沿用用户指定 authz-atlas 风格，内部产品与技术团队，15 至 20 分钟讲解",
+  "material": "PRD v0.5, historical blueprint, supplied technical atlas reference",
+  "heroReview": "fix; 2 resolved",
+  "finishReview": "fix; 1 resolved",
+  "scope": "local product briefing",
+  "date": "2026-11-02",
+  "mode": "build"
+ }
+]

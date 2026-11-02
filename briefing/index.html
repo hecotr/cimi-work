@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cimi Work 产品介绍与蓝图：面向内部产品与技术团队的互动讲解，展示 Task 协作、执行体系与分阶段交付。">
+  <title>Cimi Work 产品介绍与蓝图</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <aside class="rail" aria-label="讲解导航">
+    <a class="brand" href="#overview"><b>Cimi Work</b><span>产品介绍与蓝图</span></a>
+    <button class="ghost mobile-toggle" type="button" id="menuBtn" aria-expanded="false" aria-controls="toc">章节目录</button>
+    <nav class="toc" id="toc" aria-label="章节">
+      <a href="#overview" aria-current="location"><span>00</span>让工作持续推进</a>
+      <a href="#panorama"><span>01</span>Task 协作全景</a>
+      <a href="#spaces"><span>02</span>空间与共同事实</a>
+      <a href="#story"><span>03</span>从目标走到交付</a>
+      <a href="#executors"><span>04</span>四类执行机制</a>
+      <a href="#harness"><span>05</span>专业流程与回退</a>
+      <a href="#architecture"><span>06</span>产品与执行边界</a>
+      <a href="#roadmap"><span>07</span>分阶段落地</a>
+      <a href="#alignment"><span>08</span>验收与待对齐项</a>
+    </nav>
+    <div class="rail-foot">
+      <div class="rail-tools">
+        <button class="ghost" type="button" id="notesBtn" aria-pressed="false">讲解备注</button>
+        <button class="ghost" type="button" id="focusBtn" aria-pressed="false">沉浸讲解</button>
+        <button class="ghost" type="button" id="themeBtn" aria-pressed="false">深色模式</button>
+        <button class="ghost" type="button" id="printBtn">打印讲义</button>
+      </div>
+      <p><kbd>J</kbd> / <kbd>K</kbd> 章节<br><kbd>F</kbd> 沉浸 <kbd>N</kbd> 备注</p>
+      <p>内部产品与技术团队<br>建议讲解 15 至 20 分钟</p>
+    </div>
+  </aside>
+  <button class="ghost exit-immersive" id="exitFocus" type="button">退出沉浸 <kbd>F</kbd></button>
+  <main id="main">
+    <section class="chapter hero" id="overview" data-title="让工作持续推进">
+      <h1>让人和 Agent<br>围绕同一个 Task<br>把工作做完</h1>
+      <p class="lead">从目标出发，汇聚上下文、协作和执行，直到交付被验收。</p>
+      <a class="button" href="#panorama">开始讲解</a>
+      <figure class="continuity" aria-label="同一个 Task 承载多次 Run 的协作关系">
+        <div class="task-spine">
+          <h2>Task 持续承载工作</h2>
+          <div class="spine-facts"><span>目标与上下文</span><span>人和 Agent</span><span>共同进展与决定</span><span>交付与验收</span></div>
+        </div>
+        <div class="run-chain" aria-label="切换执行示意">
+          <button type="button" data-run="0" aria-pressed="true"><b>Run 1</b><span>理解目标</span></button>
+          <button type="button" data-run="1" aria-pressed="false"><b>Run 2</b><span>执行与协作</span></button>
+          <button type="button" data-run="2" aria-pressed="false"><b>Run 3</b><span>修改与交付</span></button>
+        </div>
+        <figcaption id="continuity-note" aria-live="polite">一次执行可以结束；任务的目标、讨论和成果继续保留。</figcaption>
+      </figure>
+      <aside class="speaker"><h3>开场讲法，约 1 分钟</h3><p>先明确产品定位：Cimi Work 是以 Task 为中心、Agent 驱动的 AI Native 工作协作平台。点选三个 Run，强调任务可以跨越多次执行和人工等待。后面沿着一项工作，解释上下文、分工与交付如何连起来。</p></aside>
+    </section>
+    <section class="chapter" id="panorama" data-title="Task 协作全景">
+      <h2>一项工作，多个执行体，共同推进</h2>
+      <p class="lead">沿着目标、上下文、执行和交付走一遍。点选图中对象，也可以单独解释它的职责。</p>
+      <div class="toolbar map-controls" aria-label="全景导览">
+        <button class="ghost" type="button" id="mapPrev">上一步</button>
+        <button class="ghost" type="button" id="mapNext">下一步</button>
+        <span class="caption" id="mapCounter" role="status">导览 1 / 7</span>
+      </div>
+      <figure class="atlas-figure">
+        <svg class="atlas-svg" viewBox="0 0 960 540" role="group" aria-label="Task 协作关系图，可点选节点查看职责">
+          <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" class="arrow-head"/></marker></defs>
+          <path class="wire" data-edge="goal-task" d="M150 105 V140 H480 V183"/>
+          <path class="wire" data-edge="space-task" d="M480 105 V183"/>
+          <path class="wire" data-edge="context-task" d="M810 105 V140 H480 V183"/>
+          <path class="wire" data-edge="people-task" d="M225 225 H325"/>
+          <path class="wire" data-edge="task-artifact" d="M635 225 H735"/>
+          <path class="wire" data-edge="task-executors" d="M480 268 V310 H120 V350 M480 310 H360 V350 M480 310 H600 V350 M480 310 H840 V350"/>
+          <path class="wire" data-edge="executors-runtime" d="M120 422 V450 H480 V473 M360 422 V450 M600 422 V450 M840 422 V450 H480"/>
+          <path class="wire feedback-wire" data-edge="feedback-task" d="M850 264 V292 H640 V252"/>
+          <g class="diagram-node" data-node="goal" role="button" tabindex="0" aria-label="目标：发起工作"><rect x="40" y="33" width="220" height="72" rx="6"/><text x="150" y="63" class="node-title">目标与委托</text><text x="150" y="87" class="node-sub">用户主动发起工作</text></g>
+          <g class="diagram-node" data-node="space" role="button" tabindex="0" aria-label="空间：归属与资源边界"><rect x="370" y="33" width="220" height="72" rx="6"/><text x="480" y="63" class="node-title">个人 / 项目空间</text><text x="480" y="87" class="node-sub">归属、成员与资源边界</text></g>
+          <g class="diagram-node" data-node="context" role="button" tabindex="0" aria-label="上下文：获准的资料与历史"><rect x="700" y="33" width="220" height="72" rx="6"/><text x="810" y="63" class="node-title">上下文与资料</text><text x="810" y="87" class="node-sub">知识、代码、数据与历史</text></g>
+          <g class="diagram-node human-node" data-node="people" role="button" tabindex="0" aria-label="人：协作、确认、审批与验收"><rect x="15" y="187" width="210" height="77" rx="6"/><text x="120" y="218" class="node-title">人参与推进</text><text x="120" y="243" class="node-sub">确认、审批、验收</text></g>
+          <g class="diagram-node task-node" data-node="task" role="button" tabindex="0" aria-label="Task：持续协作的共同现场"><rect x="325" y="183" width="310" height="85" rx="6"/><text x="480" y="219" class="task-title">Task</text><text x="480" y="246" class="node-sub">目标、进度、决定与交付</text></g>
+          <g class="diagram-node delivery-node" data-node="artifact" role="button" tabindex="0" aria-label="交付：成果版本、证据与验收"><rect x="735" y="187" width="210" height="77" rx="6"/><text x="840" y="218" class="node-title">交付与反馈</text><text x="840" y="243" class="node-sub">版本、证据与验收</text></g>
+          <g class="diagram-node" data-node="agent" role="button" tabindex="0" aria-label="单 Agent"><rect x="20" y="350" width="200" height="72" rx="6"/><text x="120" y="380" class="node-title">单 Agent</text><text x="120" y="405" class="node-sub">直接承接目标</text></g>
+          <g class="diagram-node" data-node="team" role="button" tabindex="0" aria-label="通用 Team"><rect x="260" y="350" width="200" height="72" rx="6"/><text x="360" y="380" class="node-title">通用 Team</text><text x="360" y="405" class="node-sub">组织多 Agent 分工</text></g>
+          <g class="diagram-node" data-node="matrix" role="button" tabindex="0" aria-label="Matrix AgentTeams"><rect x="500" y="350" width="200" height="72" rx="6"/><text x="600" y="380" class="node-title node-title-small">Matrix AgentTeams</text><text x="600" y="405" class="node-sub">独立执行机制接入</text></g>
+          <g class="diagram-node" data-node="harness" role="button" tabindex="0" aria-label="业务 Harness"><rect x="740" y="350" width="200" height="72" rx="6"/><text x="840" y="380" class="node-title">业务 Harness</text><text x="840" y="405" class="node-sub">阶段、门禁与回退</text></g>
+          <g class="diagram-node" data-node="runtime" role="button" tabindex="0" aria-label="Agent OS 与 Runtime"><rect x="250" y="473" width="460" height="55" rx="6"/><text x="480" y="507" class="node-title">复用 Agent OS / Runtime 的执行能力</text></g>
+        </svg>
+        <div class="node-index" aria-label="全景图节点列表">
+          <button type="button" class="ghost" data-node="goal">目标与委托</button><button type="button" class="ghost" data-node="space">个人 / 项目空间</button><button type="button" class="ghost" data-node="context">上下文</button><button type="button" class="ghost" data-node="people">人参与推进</button><button type="button" class="ghost" data-node="task">Task</button><button type="button" class="ghost" data-node="artifact">交付与反馈</button><button type="button" class="ghost" data-node="agent">单 Agent</button><button type="button" class="ghost" data-node="team">通用 Team</button><button type="button" class="ghost" data-node="matrix">Matrix AgentTeams</button><button type="button" class="ghost" data-node="harness">业务 Harness</button><button type="button" class="ghost" data-node="runtime">Agent OS / Runtime</button>
+        </div>
+        <figcaption>蓝色表示执行与任务关联，琥珀表示人的决定，绿色表示交付。所有节点描述的是产品设计职责。</figcaption>
+      </figure>
+      <div class="explanation" id="mapDetail" aria-live="polite"><h3>先有一个明确目标</h3><p>用户在个人或项目空间提出工作。通用任务只要求填写目标，所在空间自动带入。</p><span class="caption">依据：PRD 第 3、4 节</span></div>
+      <aside class="speaker"><h3>全景讲法，约 3 分钟</h3><p>先按“下一步”走完七步：发起目标、确定空间、补齐上下文、组织执行、人的参与、交付验收、反馈续接。强调 Task 维护共同事实，四类执行机制承担具体工作；一条流程中可能出现多次 Run。讨论时点图中节点解释职责，再回到导览。</p></aside>
+    </section>
+
+    <section class="chapter" id="spaces" data-title="空间与共同事实">
+      <h2>个人与项目空间，共用一个 Task 底座</h2>
+      <p class="lead">空间决定工作和资料的归属。默认首页“我的工作”汇总本人有权访问的任务与待办。</p>
+      <div class="split-layout">
+        <div>
+          <div class="tabs" role="tablist" aria-label="选择空间">
+            <button type="button" id="spacePersonal" role="tab" data-space="personal" aria-selected="true" aria-controls="spacePanel">个人空间</button>
+            <button type="button" id="spaceProject" role="tab" data-space="project" aria-selected="false" tabindex="-1" aria-controls="spacePanel">项目空间</button>
+          </div>
+          <div id="spacePanel" role="tabpanel" aria-labelledby="spacePersonal"><dl class="fact-list" id="spaceFacts"><div><dt>工作归属</dt><dd>个人私有 Task，无需先建项目</dd></div><div><dt>资料范围</dt><dd>个人资料与本人已授权的连接器</dd></div><div><dt>参与边界</dt><dd>默认仅本人可见，分享需要明确选择</dd></div></dl></div>
+        </div>
+        <div class="share-demo">
+          <h3>个人成果进入项目时，选择要发布的内容</h3>
+          <fieldset><legend>选择发布材料，边界示意</legend><label><input type="checkbox" id="shareGoal" checked> 目标摘要</label><label><input type="checkbox" id="shareReport" checked> 报告与证据</label></fieldset>
+          <p id="shareResult" class="share-result" aria-live="polite">新的项目 Task 将收到：目标摘要、报告与证据。</p>
+          <p class="caption">私有原 Task 和原讨论继续保留。本页只演示内容范围，不执行发布。</p>
+        </div>
+      </div>
+      <div class="object-strip" aria-label="Task 关联的共同事实">
+        <button class="ghost" type="button" data-object="run">Run</button><button class="ghost" type="button" data-object="subtask">Subtask</button><button class="ghost" type="button" data-object="human">Human Action</button><button class="ghost" type="button" data-object="decision">Decision</button><button class="ghost" type="button" data-object="artifact">Artifact</button><button class="ghost" type="button" data-object="phase">Harness Phase</button>
+      </div>
+      <p class="note">点选对象查看定义。Task 可以关联多次执行、子任务、人工事项、决定、成果版本和专业阶段。</p>
+      <aside class="speaker"><h3>空间讲法，约 2 分钟</h3><p>先切个人和项目空间，说明两者并列、共用任务模型。“我的工作”是汇总入口，不复制任务或扩大权限。取消勾选发布材料，演示项目只获得明确选定内容。最后点 Run 或 Human Action，说明共同事实需要结构化记录。</p></aside>
+    </section>
+
+    <section class="chapter" id="story" data-title="从目标走到交付">
+      <h2><span class="title-phrase">沿着一次分析任务，</span><span class="title-phrase">走到真实交付</span></h2>
+      <p class="lead">“分析本周运营指标，并将总结发送给项目相关人员。”用一个例子看目标如何变成可验收的成果。</p>
+      <p class="demo-notice">流程演示：本页未连接 Agent、数据源或通知渠道，所有状态与回执均为示意。</p>
+      <ol class="story-steps" id="storySteps" aria-label="选择流程步骤">
+        <li><button type="button" data-story="0" aria-current="step">下达目标</button></li><li><button type="button" data-story="1">查找上下文</button></li><li><button type="button" data-story="2">等待确认</button></li><li><button type="button" data-story="3">继续分析</button></li><li><button type="button" data-story="4">提交成果</button></li><li><button type="button" data-story="5">交付报送</button></li><li><button type="button" data-story="6">验收完成</button></li>
+      </ol>
+      <div class="scenario-layout">
+        <div class="state-ledger" aria-label="演示状态，所有行属于同一个 Task">
+          <div><span>Task 整体状态</span><strong id="storyTask" role="status">未开始（演示）</strong></div>
+          <div><span>本次 Run</span><strong id="storyRun">等待执行资源</strong></div>
+          <div><span>人工事项</span><strong id="storyHuman">发起人默认负责验收</strong></div>
+          <div><span>成果与交付</span><strong id="storyArtifact">已记录目标与交付要求</strong></div>
+        </div>
+        <div class="story-explanation" aria-live="polite"><h3 id="storyTitle">目标是创建入口</h3><p id="storyBody">空间自动带入，执行机制可以指定，也可以自动匹配。普通任务不增加强制的推荐确认页。</p><p id="storyPoint" class="key-point">先把要完成的工作交给 Task。</p><span class="caption" id="storySource">依据：PRD 第 3 节</span></div>
+      </div>
+      <div class="toolbar"><button class="ghost" type="button" id="storyPrev">上一步</button><button class="ghost" type="button" id="storyNext">下一步</button><button class="ghost" type="button" id="storyReset">从头演示</button><span class="caption">本章可用键盘左右键切换步骤</span></div>
+      <aside class="speaker"><h3>主故事讲法，约 3 分钟</h3><p>依次切到“等待确认”，说明口径不清时才找具体的人；再到“提交成果”，停一下强调 Run 已成功，Task 仍待验收。报送需要真实回执，失败不能被报告生成掩盖。最后到“验收完成”，说明默认人工验收，显式配置的自动规则也必须有条件、版本和证据。页面中的报送只是演示。</p></aside>
+    </section>
+
+    <section class="chapter" id="executors" data-title="四类执行机制">
+      <h2>谁承接工作，如何组织执行</h2>
+      <p class="lead">用户可指定执行机制；未指定时先用适用的空间默认，再匹配可用资源。</p>
+      <div class="executor-layout">
+        <div class="executor-list" aria-label="选择执行机制">
+          <button type="button" data-executor="agent" aria-pressed="true"><b>单 Agent</b><span>直接承接一个目标</span></button>
+          <button type="button" data-executor="team" aria-pressed="false"><b>通用 Team</b><span>多 Agent 分工与汇总</span></button>
+          <button type="button" data-executor="matrix" aria-pressed="false"><b>Matrix AgentTeams</b><span>复用独立的团队执行体系</span></button>
+          <button type="button" data-executor="harness" aria-pressed="false"><b>业务 Harness</b><span>以专业流程与门禁主导</span></button>
+        </div>
+        <div class="executor-detail" id="executorDetail" aria-live="polite"><h3>单 Agent 直接推进目标</h3><p>适合边界清楚、主要由一种能力完成的工作。Agent 获取获准上下文，执行任务，并在需要时邀请协作者。</p><dl class="fact-list"><div><dt>示例</dt><dd>分析指标、整理材料、生成报告</dd></div><div><dt>Task 保留</dt><dd>目标、来源、进度、人工待办与成果</dd></div></dl></div>
+      </div>
+      <p class="note">四类机制使用统一的 Task 协作入口，保留各自的协调方式。目录中的资源只有接入可用适配器后才能执行。</p>
+      <aside class="speaker"><h3>执行机制讲法，约 2 分钟</h3><p>逐一点击四种机制。通用 Team 可以组合分工；Matrix AgentTeams 需要独立接入；业务 Harness 可以主导整项工作，并定义自己的阶段和门禁。首版先打通单 Agent 和固定协作路径，模型支持四类机制不代表四套引擎都已建成。</p></aside>
+    </section>
+
+    <section class="chapter" id="harness" data-title="专业流程与回退">
+      <h2>专业流程会回退，Task 的历史继续保留</h2>
+      <p class="lead">产研任务可由业务 Harness 主导。N1 至 N5 是专业流程示例，普通任务按自己的交付要求推进。</p>
+      <p class="demo-notice">阶段演示：当前示意位于 N2，点选阶段查看职责，或演示意图问题引发的回退。</p>
+      <div class="phase-track" aria-label="产研 Harness 阶段示例">
+        <button type="button" data-phase="0" aria-pressed="false"><b>N1</b><span>意图锁定</span></button><button type="button" data-phase="1" aria-pressed="true"><b>N2</b><span>生成与验证</span></button><button type="button" data-phase="2" aria-pressed="false"><b>N3</b><span>交付确认</span></button><button type="button" data-phase="3" aria-pressed="false"><b>N4</b><span>部署执行</span></button><button type="button" data-phase="4" aria-pressed="false"><b>N5</b><span>持续反馈</span></button>
+      </div>
+      <div class="split-layout phase-layout">
+        <div id="phaseDetail" aria-live="polite"><h3>N2 生成与验证</h3><p>拆分工作，组织开发和测试，并循环改进。</p><p class="note">保留子任务、代码或 PR、检查证据与迭代记录。</p></div>
+        <div><h3>同一个 Task 的阶段历史</h3><ol class="history" id="phaseHistory"><li>目标经确认，进入 N2。</li><li>生成与验证正在推进（演示）。</li></ol></div>
+      </div>
+      <div class="toolbar"><button class="ghost" type="button" id="rollbackBtn">演示 N2 回到 N1</button><button class="ghost" type="button" id="phaseReset">恢复 N2 示意</button><span class="caption" id="phaseStatus" role="status">Task 进行中，阶段 N2（演示）</span></div>
+      <p class="note">回退记录原因，保留原产物，标识失效证据和需重新确认的事项。阶段进度、Run 状态和 Task 验收分别记录。</p>
+      <aside class="speaker"><h3>专业流程讲法，约 2 分钟</h3><p>先点 N3、N4，解释质量门禁和部署审批属于 Harness。回到 N2，演示退回 N1：任务标识不变，原成果不删除，但与旧目标有关的证据需要重新评估。不要用“已经跑到某个阶段”替代“工作已被验收”。</p></aside>
+    </section>
+
+    <section class="chapter" id="architecture" data-title="产品与执行边界">
+      <h2>协作产品层，连接既有执行能力</h2>
+      <p class="lead">Cimi Work 管理工作整体；任务持续推进、专业协调与 Agent 执行各有职责。</p>
+      <div class="architecture-stack" aria-label="职责分层">
+        <div><h3>Cimi Work 协作产品层</h3><p>空间、Task、工作台、人工待办、共同事实、交付与验收</p></div>
+        <div><h3>任务服务与 Task Runtime</h3><p>持久化、执行绑定、事件续接、状态汇总与恢复协调</p></div>
+        <div><h3>执行协调层</h3><p>主 Agent、通用 Team、Matrix AgentTeams 或业务 Harness</p></div>
+        <div><h3>Agent OS / Runtime</h3><p>复用 Session、Memory、Knowledge、Tools、MCP、Sandbox 等能力</p></div>
+      </div>
+      <div class="route-demo">
+        <div class="tabs" role="tablist" aria-label="选择输入来源"><button type="button" role="tab" data-route="request" aria-selected="true" aria-controls="routePanel">明确委托</button><button type="button" role="tab" data-route="feedback" aria-selected="false" tabindex="-1" aria-controls="routePanel">后续反馈</button><button type="button" role="tab" data-route="candidate" aria-selected="false" tabindex="-1" aria-controls="routePanel">主动候选</button></div>
+        <div class="route-output" id="routePanel" role="tabpanel" aria-live="polite"><strong id="routeTitle">确定空间，创建 Task，再组织执行</strong><p id="routeBody">明确委托按正常流程推进；协调者主动获取上下文，选择获准的执行资源。</p></div>
+      </div>
+      <p class="note">首版优先云端真实交付；本地 Agent 的身份、连接、状态同步、断线恢复和产物回传，在下一阶段验证。底层资源实际可用清单仍需技术核对。</p>
+      <aside class="speaker"><h3>技术边界讲法，约 2 分钟</h3><p>沿四层往下讲。Task Runtime 负责持续工作，不另造一套模型执行循环；路由负责新建或续接，不替代 Harness 内部流程。切换三种输入：明确委托直接进入正常流程，相关反馈回到原 Task，主动候选默认观察。旧 Run 的迟到回调不能覆盖当前有效状态，重复事件不能造成重复动作。</p></aside>
+    </section>
+
+    <section class="chapter" id="roadmap" data-title="分阶段落地">
+      <h2>先跑通云端交付，再验证跨端协作</h2>
+      <p class="lead">首版优先云端真实交付，下一阶段验证专业流程与本地协作。路线属于 PRD 的实施建议，具体范围、资源能力和排期需在接入评审后确认。</p>
+      <ol class="roadmap-list">
+        <li><h3>首版，云端真实闭环</h3><p>两类空间、我的工作、目标式创建、上下文、固定协作、人工待办、交付与验收。</p><button class="ghost" type="button" data-roadmap="0" aria-pressed="true">查看首版验收</button></li>
+        <li><h3>下一阶段，专业与跨端接入</h3><p>Harness 阶段与回退、本地 Agent 真实协作、主动事件接单。</p><button class="ghost" type="button" data-roadmap="1" aria-pressed="false">查看接入验证</button></li>
+        <li><h3>后续增强，扩展协作能力</h3><p>动态组队、更多连接器、定时触发、成本与并发策略、知识回流。</p><button class="ghost" type="button" data-roadmap="2" aria-pressed="false">查看增强边界</button></li>
+      </ol>
+      <div class="roadmap-proof" id="roadmapProof" aria-live="polite"><h3>用一条真实任务验收首版</h3><p>只填目标发起工作，Agent 使用获准资料，必要时请求人参与，最终交付可打开的产物与有效验收记录。</p><span class="caption">重点检查：执行真实发生，通知状态可核对，中断后可恢复。</span></div>
+      <aside class="speaker"><h3>路线讲法，约 2 分钟</h3><p>先用云端分析与报送验证真实闭环，再讨论扩展。四种机制统一建模，不意味着首版同时自建四套引擎。本地协作是明确产品目标，连接和恢复协议还要验证。路线不写未经确认的日期，不把原型演示当成实际接入已完成。</p></aside>
+    </section>
+
+    <section class="chapter closing" id="alignment" data-title="验收与待对齐项">
+      <h2>用一次可验收的任务，对齐下一步</h2>
+      <p class="lead">把“持续推进直到交付”变成团队可以共同检查的结果。</p>
+      <div class="split-layout">
+        <fieldset class="acceptance-list"><legend>讨论对齐清单，本页勾选仅用于讲解</legend><label><input type="checkbox"> 目标和完成标准清楚</label><label><input type="checkbox"> 上下文在授权范围内取得</label><label><input type="checkbox"> 协作、待办与恢复回到原 Task</label><label><input type="checkbox"> 成果、版本和交付证据可核对</label><label><input type="checkbox"> 有效验收决定 Task 完成</label></fieldset>
+        <div class="decisions"><h3>产品与技术一起确认</h3><ol><li>首批云端 Agent、固定协作与业务渠道有哪些？</li><li>Task、Run、阶段和事件如何关联、去重与恢复？</li><li>验收规则、成果版本和跨端边界如何落地？</li></ol></div>
+      </div>
+      <details class="sources"><summary>查看内容依据与规划边界</summary><ul><li>《Cimi Work PRD》v0.5：第 1 至 5 节支撑定位、空间、创建、协作与工作台。</li><li>PRD 第 6 至 7 节：分析报送、专业 Harness、云端与本地目标、职责分层与事件续接。</li><li>PRD 第 8 至 9、11 至 12 节：实施建议、验收要求、待评审项与原型演示约定。</li><li>《Semi Work 产品蓝图与需求设计讨论整理》：产品方向的历史依据，采用当前产品名 Cimi Work。</li><li>页面布局参考用户提供的 authz-atlas。流程、状态与资源描述用于讲解，实际能力与接入状态需要验证。</li></ul></details>
+      <aside class="speaker"><h3>收尾讲法，约 1 分钟</h3><p>回到一次真实任务能否从目标走到有效验收。用左侧清单汇总已对齐内容，再讨论右侧三类问题：可用执行资源、共同事实与协议、验收和跨端边界。最后约定首条真实闭环的业务场景与负责人，排期依据资源核实后再定。</p></aside>
+      <footer class="foot"><p>产品规划讲解稿，基于 PRD v0.5。交互采用演示状态，实际执行与通知接入另行实施。</p><a href="#overview">回到开场</a></footer>
+    </section>
+  </main>
+  <dialog id="objectDialog" aria-labelledby="objectTitle"><button class="ghost dialog-close" type="button" id="closeDialog">关闭</button><h2 id="objectTitle">共同事实</h2><p id="objectBody"></p><p class="caption" id="objectSource"></p></dialog>
+  <noscript><p>正文可离线阅读。开启 JavaScript 后可使用导览、演示和讲解备注。</p></noscript>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "scanned": "2026-11-02",
+  "findings": {
+    "reference": "C:/Users/chaol/Downloads/汇报用-Cimi状态/authz-atlas/index.html:1",
+    "fonts": "styles.css:29-31, serif Chinese display and sans body",
+    "palette": "styles.css:4-28, cool paper, blue execution, amber human input, green acceptance, coral rollback",
+    "framework": "index.html:1, native HTML with data.js and app.js",
+    "motion": "app.js:95, chapter tracking and guided diagram highlighting",
+    "content": "docs/Cimi-Work-PRD.md v0.5 and the supplied product blueprint"
+  },
+  "preserve": ["chapter rail", "cartographic grid", "serif headings", "semantic palette", "guided exploration"],
+  "introduce": ["Cimi Work task narrative", "presenter notes", "offline single-file export", "explicit planning and simulation labels"],
+  "audience": "internal product and engineering teams",
+  "duration": "15–20 minutes",
+  "scope": "local explanatory artifact; existing prototype is outside this change"
+}
