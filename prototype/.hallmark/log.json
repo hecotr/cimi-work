@@ -1,22 +1,103 @@
 [
   {
+    "entry": "Cimi Work 0.2 resource workbench",
+    "date": "2026-11-02",
+    "scope": "app",
+    "shape": "app screen",
+    "theme": "console",
+    "axes": [
+      "light",
+      "grotesk-sans",
+      "chromatic-amber"
+    ],
+    "hero": "none: preserve existing work application",
+    "nav": "existing space-aware sidebar",
+    "footer": "local demo persistence and reset",
+    "imagery": "working configuration forms and task records",
+    "photos": [],
+    "fingerprint": [
+      "sidebar",
+      "resource-directory",
+      "configuration-form",
+      "dependency-rows",
+      "version-records",
+      "handoff-strip"
+    ],
+    "sections": [
+      "Resource directory",
+      "Agent delegates",
+      "Team composition",
+      "Matrix and Harness references",
+      "Space grants",
+      "Task handoff",
+      "Context and delivery"
+    ],
+    "signature": "A configured resource becomes a versioned, explicitly authorized Task binding",
+    "waived": [],
+    "answered": [
+      "F4: neutral secondary controls are distinct from the single amber primary style"
+    ],
+    "prompt": "先补充 PRD，再补充执行资源配置、空间绑定、任务改派与交付原型，仅本地",
+    "verification": {
+      "functionalScenarios": 50,
+      "legacyScenarios": 19,
+      "workbenchScenarios": 31,
+      "browserErrors": 0,
+      "floor": 0,
+      "reflex": 0,
+      "openWarnings": 0,
+      "render": "ran",
+      "review": "in-thread; prototype fast mode",
+      "resolved": "Mobile resource headings now keep their own full-width row"
+    }
+  },
+  {
     "entry": "Cimi Work 中文工作协作原型",
     "date": "2026-11-02",
     "scope": "app",
     "shape": "app screen",
     "theme": "console",
-    "axes": ["light", "grotesk-sans", "chromatic-amber"],
+    "axes": [
+      "light",
+      "grotesk-sans",
+      "chromatic-amber"
+    ],
     "hero": "none: working application",
     "nav": "space-aware sidebar",
     "footer": "demo persistence disclosure and reset",
     "imagery": "live application; no image slots",
     "photos": [],
-    "fingerprint": ["sidebar", "task-inbox", "table", "activity-rail", "detail-meta", "phase-rail"],
-    "sections": ["My Work", "Personal space", "Project space", "Task", "Resources", "Knowledge", "Settings"],
+    "fingerprint": [
+      "sidebar",
+      "task-inbox",
+      "table",
+      "activity-rail",
+      "detail-meta",
+      "phase-rail"
+    ],
+    "sections": [
+      "My Work",
+      "Personal space",
+      "Project space",
+      "Task",
+      "Resources",
+      "Knowledge",
+      "Settings"
+    ],
     "signature": "Task continues across human decisions, versioned delivery and Harness rollback",
     "waived": [],
-    "answered": ["F4: neutral controls and segmented selection are secondary; only .button.primary uses amber emphasis"],
+    "answered": [
+      "F4: neutral controls and segmented selection are secondary; only .button.primary uses amber emphasis"
+    ],
     "prompt": "制作 Cimi Work 可点击高保真原型，按已确认 PRD 和 Hallmark Console paper 方向",
-    "verification": { "functionalScenarios": 19, "browserErrors": 0, "floor": 0, "reflex": 0, "openWarnings": 0, "render": "ran", "review": "in-thread; prototype fast mode" }
+    "verification": {
+      "functionalScenarios": 19,
+      "browserErrors": 0,
+      "floor": 0,
+      "reflex": 0,
+      "openWarnings": 0,
+      "render": "ran",
+      "review": "in-thread; prototype fast mode"
+    }
   }
 ]
