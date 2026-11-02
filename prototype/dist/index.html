@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f8f4">
+  <meta name="description" content="Cimi Work 中文交互原型，以 Task 为中心，让人与 Agent 持续协作并交付成果。所有资源和运行均为演示。">
+  <title>Cimi Work 工作协作原型</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232b302a'/%3E%3Ctext x='8' y='24' font-size='26' fill='%23f8f8f4'%3Ec%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./data.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳转到主要内容</a>
+  <div id="app" class="app-shell">
+    <aside class="sidebar"><a class="brand" href="#/home"><span class="brand-mark">c</span><span class="brand-name">cimi work</span></a><nav aria-label="主导航"><a class="nav-link" href="#/home">我的工作</a><a class="nav-link" href="#/space/personal">个人空间</a><a class="nav-link" href="#/space/ops">运营分析</a><a class="nav-link" href="#/space/product">产品研发</a></nav></aside>
+    <div class="app-main"><header class="topbar"><strong>Cimi Work</strong><span class="demo-label">交互原型，演示数据</span></header><main id="main-content" class="page"><div class="page-head"><div><h1>我的工作</h1><p>集中处理待办，跟进与你有关的任务。</p></div></div><section><h2>需要你处理</h2><p>确认运营分析的统计口径，验收个人研究笔记。</p><p>通过 Task，自主查找上下文、组织协作并交付成果。</p></section><noscript><p>请启用 JavaScript 体验任务创建、协作、阶段回退和验收。原型中的任务与资源均为演示。</p></noscript></main></div>
+  </div>
+  <dialog id="dialog" aria-labelledby="dialog-title"></dialog>
+  <div id="announcer" class="visually-hidden" role="status" aria-live="polite"></div>
+</body>
+</html>

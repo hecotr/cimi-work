@@ -1,0 +1,22 @@
+[
+  {
+    "entry": "Cimi Work 中文工作协作原型",
+    "date": "2026-11-02",
+    "scope": "app",
+    "shape": "app screen",
+    "theme": "console",
+    "axes": ["light", "grotesk-sans", "chromatic-amber"],
+    "hero": "none: working application",
+    "nav": "space-aware sidebar",
+    "footer": "demo persistence disclosure and reset",
+    "imagery": "live application; no image slots",
+    "photos": [],
+    "fingerprint": ["sidebar", "task-inbox", "table", "activity-rail", "detail-meta", "phase-rail"],
+    "sections": ["My Work", "Personal space", "Project space", "Task", "Resources", "Knowledge", "Settings"],
+    "signature": "Task continues across human decisions, versioned delivery and Harness rollback",
+    "waived": [],
+    "answered": ["F4: neutral controls and segmented selection are secondary; only .button.primary uses amber emphasis"],
+    "prompt": "制作 Cimi Work 可点击高保真原型，按已确认 PRD 和 Hallmark Console paper 方向",
+    "verification": { "functionalScenarios": 19, "browserErrors": 0, "floor": 0, "reflex": 0, "openWarnings": 0, "render": "ran", "review": "in-thread; prototype fast mode" }
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "scanned": "2026-11-02",
+  "findings": {
+    "source": "docs/Cimi-Work-PRD.md:517; approved prototype scope and Console paper recommendation",
+    "fonts": "No existing implementation or font assets; Chinese system sans with Console typography hierarchy",
+    "palette": "Console paper colourway selected in the conversation",
+    "motion": "Only UI state transitions; reduced motion supported",
+    "spacing": "Hallmark app scale, tokens and compact controls",
+    "framework": "Buildless HTML, CSS and JavaScript; browser-local demo persistence",
+    "houseRules": "AGENTS.md:3 requires a task-scoped Git commit"
+  },
+  "preserve": ["Approved PRD", "Chinese desktop workflow", "Private personal and shared project spaces", "Explicit demo data"],
+  "introduce": ["Console paper app screens", "Task-first work queue", "Interactive human decisions and artifact acceptance", "Harness rollback example"]
+}
